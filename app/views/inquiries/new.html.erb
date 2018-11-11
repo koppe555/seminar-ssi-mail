@@ -1,0 +1,51 @@
+<div class='topPage'>
+  <div class="container">
+    <h1>青学SSI疑似ゼミ分けサービス</h1>
+    <br>
+    <br>
+   
+    <p>スリザリンは嫌だ...スリザリンは嫌だ...スリザリンは嫌だ......<h2>グリフィンドォォォォル！</h2><br>
+    あの感動をあなたにも、30秒でゼミか決まる⁉　疑似ゼミ分けサービス！
+    </p>
+    <%= form_with(model: @inquiry, url: inquiries_confirm_path, local: true) do |f| %>
+    
+    <% if @inquiry.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <strong>入力内容にエラーがあります</strong>
+    <ul>
+      <% @inquiry.errors.each do |attr, msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+    
+      <div class="form-group">
+       <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "名前" %>
+      </div>
+      <div class="form-group">
+       <%= f.label :email %>
+        <%= f.text_field :email, autofocus: true, class: "form-control", placeholder: "メールアドレス" %>
+      </div>
+      <div class="form-group">
+       <%= f.label :number %>
+        <%= f.text_field :number, autofocus: true, class: "form-control", placeholder: "学籍番号" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :cource %>
+        <%= f.select(:cource, [["社会情報", "社会情報"], ["社会人間", "社会人間"], ["人間情報", "人間情報"]], {}, class: "form-control") %>
+      </div>
+       <div class="form-group">
+        <%= f.label :interest %>
+        <%= f.select(:interest, [["情報", "情報"], ["社会", "社会"], ["人間", "人間"]], {}, class: "form-control") %>
+      </div>
+      <div class="form-group">
+        <%= f.label :content %>
+        <%= f.text_area :content, class: "form-control", placeholder: "意気込みを一言" %>
+      </div>
+       <div class="text-center"><%= f.submit '確認画面へ', class: 'btn btn-primary' %></div>
+    <% end %>
+  </div>
+</div>

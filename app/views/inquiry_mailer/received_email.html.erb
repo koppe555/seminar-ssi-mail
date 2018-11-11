@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      .userName {
+        font-weight: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>学籍番号:<%= @user.number %> </p>
+    <p>名前:<span class="userName"><%= @user.name %>さん</span> </p>    
+    <p>
+      この度は疑似ゼミ分けサービスをご利用いただきありがとうございます。あなたのゼミが決定しました。
+    </p>
+    <div>【<%= @user.name %>さんの情報】</div>
+    <div>名前:<%= @user.name %></div>
+    <div>学籍番号:<%= @user.number %></div>
+    <div>希望コース:<%= @user.cource %></div>
+    <div>興味分野:<%= @user.interest %></div>
+    
+     <br>
+    <br>
+    <br>
+    <br>
+    
+    <div>あなたのゼミは...</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <h3><%= @semi_comment %></h3>
+    
+    <br>
+    <br>
+    
+    <h2><%= @semi %></h2>
+    
+    <br>
+    <br>
+    <br>
+    
+    
+  </body>
+</html>

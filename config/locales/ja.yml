@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      inquiry:
+        name: "あなたの名前"
+        email: "あなたのメールアドレス"
+        number: "あなたの学籍番号(適当で可)"
+        cource: "希望コース"
+        interest: "一番の興味分野"
+        content: "自己PR"
